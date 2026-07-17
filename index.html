@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دعوة زفاف | الاء & عمار</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Marhey:wght@300;500;700&family=Noto+Naskh+Arabic:wght@400;600;700&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Envelope -->
+    <section id="envelope-screen">
+        <div class="overlay"></div>
+        <img src="images/cal5.png" class="calligraphy" alt="Calligraphy">
+        <img src="images/envelope.png" class="envelope-img" alt="Envelope">
+        <img src="images/seal2.jpg" class="wax-seal" alt="Wax Seal">
+        <div class="sparkle"></div>
+        <audio id="magicSound" src="music/magic.mp3"></audio>
+        <audio id="weddingSong" src="music/song.mp3" preload="auto" loop></audio>
+        <div class="magic-sparkles"></div>
+        <div class="open-text">
+            <p>اضغط لفتح الدعوة</p>
+        </div>
+    </section>
+
+    <!-- MAIN -->
+    <main id="main-content">
+
+        <!-- Hero -->
+        <section class="section hero">
+            <section class="hero-collage">
+                <img src="images/envelope-back.png" class="env-back" alt="خلفية الظرف">
+                <div class="items-inside">
+                    <div class="item polaroid">
+                        <img src="images/photo1.jpeg" alt="polaroid">
+                    </div>
+                    <img src="images/disk.png" class="item music-disk">
+                    <img src="images/logo.png" class="item logo">
+                    <img src="images/flower.png" class="item flower">
+                </div>
+                <img src="images/envelope-front.png" class="env-front" alt="واجهة الظرف">
+            </section>
+            
+            <div class="hero-text">
+                <img src="images/name1.jpg" alt="الاء" class="name-img">
+                <span>&</span>
+                <img src="images/name2.png" alt="عمار" class="name-img">
+            </div>
+        </section>
+
+        <!-- Invitation Section -->
+        <section class="section invitation-section">
+            <div class="invitation-wrapper">
+                <img src="images/pin.png" class="paper-clip" alt="Paper Clip">
+                <div class="lace-frame">
+                    <div class="invitation-text">
+
+                        <img src="images/cal1.png" class="call" alt="call">
+
+                        <p class="intro">
+                            لتزداد ليلتنا فرحاً وسعادةً بمشاركتكم معنا<br>
+                            نتشرف بدعوتكم لحضور خطوبة
+                        </p>
+
+                        <div class="hero-text">
+                            <img src="images/name1.jpg" alt="الاء" class="name-img">
+                            <span>&</span>
+                            <img src="images/name2.png" alt="عمار" class="name-img">
+                        </div>
+
+                        <p class="date-text">وذلك بمشيئة الله يوم الخميس</p>
+
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <i class="fas fa-location-dot"></i>
+                                <span>صالة لازورد - مساكن برزة</span>
+                                <span>مقابل فرن تفاحة</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-calendar-days"></i>
+                                <span>2026.07.23</span> 
+                                <span>الساعة 2:00 ظهراً</span>
+                            </div>
+                        </div>
+
+                        <p class="closing">بحضوركم يكتمل الفرح وتُسر الأرواح</p>
+                    </div>           
+                </div>
+        </section>
+
+        <!-- Countdown -->
+        <section class="section countdown-section">
+            <h2>العد التنازلي</h2>
+            <div class="countdown">
+                <div class="time-box"><span id="seconds">00</span><small>ثانية</small></div>
+                <div class="time-box"><span id="minutes">00</span><small>دقيقة</small></div>
+                <div class="time-box"><span id="hours">00</span><small>ساعة</small></div>
+                <div class="time-box"><span id="days">00</span><small>يوم</small></div>
+            </div>
+        </section>
+
+        <!-- Combined Section: Gallery & Thanks -->
+        <section class="combined-section">
+            <div class="composition-wrapper">
+                <div class="decorative-elements">
+                    <img src="images/photo1.jpeg" class="element polaroid p1" alt="صورة">
+                    <img src="images/photo2.jpeg" class="element polaroid p2" alt="صورة">
+                    <img src="images/swan.png" class="element swan" alt="بجعة">
+                </div>
+                <div class="center-text">
+                    <img src="images/cal6.png" class="call-image" alt="call">
+                    <p>نتطلع لرؤيتكم ومشاركتكم هذه الذكرى الجميلة.</p>
+                    <h3>Alaa & Ammar</h3>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
