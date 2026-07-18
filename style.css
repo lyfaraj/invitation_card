@@ -754,7 +754,7 @@ body::after{
 
 
     .intro{
-        font-size:14px;
+        font-size:12px;
         line-height:1.6;
         margin:0;
     }
@@ -780,7 +780,7 @@ body::after{
 
 
     .date-text{
-        font-size:14px;
+        font-size:12px;
         line-height:1.5;
         margin:0;
     }
@@ -794,7 +794,7 @@ body::after{
         gap:15px;
         width:100%;
 
-        margin-top:5px;
+        margin-top:1px;
     }
 
 
@@ -821,7 +821,7 @@ body::after{
 
 
     .closing{
-        font-size:13px;
+        font-size:10px;
         font-weight:bold;
         margin:0;
     }
