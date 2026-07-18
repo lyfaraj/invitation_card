@@ -374,71 +374,115 @@ body::after{
     filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.4));
 }
 
-@media (max-width: 768px) {
+.lace-frame{
+    width:min(600px,90vw);
+    aspect-ratio:600/850;
 
-    .lace-frame {
-        width: 95vw;
-        height: 85svh;
-        padding: 70px 14% 45px;
-        background-size: 100% 100%;
-        overflow: hidden;
-    }
+    background-image:url("images/laceFrame.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:contain;
 
-    .invitation-text {
-        width: 100%;
-        height: 100%;
-        justify-content: flex-start;
-        transform: none;
-        gap: 0;
-    }
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-    .call {
-        width: 110px;
-        margin: 0 auto 5px;
-        flex-shrink: 0;
-    }
+    padding:80px;
+    margin:50px auto;
 
-    .invitation-text .intro {
-        font-size: 12px;
-        line-height: 1.3;
-        margin: 5px 0 10px;
-        margin-top: -30px;
-    }
+    filter:drop-shadow(0 10px 20px rgba(0,0,0,.4));
+}
 
-    .invitation-text .names {
-        font-size: 26px;
-        margin: 5px 0;
-    }
 
-    .invitation-text .date-text {
-        font-size: 12px;
-        margin: 8px 0;
-    }
+/* Main invitation content */
+.invitation-text{
+    width:100%;
+    height:100%;
+    text-align:center;
+    color:#4b433d;
 
-    .details-grid {
-        gap: 12px;
-        margin: 5px 0;
-    }
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 
-    .detail-item i {
-        font-size: 15px;
-        margin-bottom: 3px;
-    }
+    margin:0;
+    position:relative; 
+}
 
-    .detail-item span,
-    .detail-item p {
-        font-size: 10px;
-        line-height: 1.1;
-    }
+.call{
+    margin-top: -60px;
+    width:min(220px, 45vw);
+    filter:drop-shadow(0 10px 20px rgba(0,0,0,.18));
+}
 
-    .invitation-text .closing {
-        font-size: 11px;
-        margin-top: 8px;
-    }
+/* Intro text */
+.invitation-text .intro {
+    margin-top: -30px;
+    font-size: 18px;
+    line-height: 1.6;
+}
 
-    .invitation-text .note {
-        font-size: 9px;
-    }
+
+/* Names */
+.invitation-text .names {
+    font-family: "Amiri", serif;
+    font-size: 42px;
+    color: #333;
+    margin: 15px 0;
+}
+
+
+/* Date */
+.invitation-text .date-text {
+    font-size: clamp(16px, 2vw, 20px);
+    margin: 10px 0;
+}
+
+.detail-item span {
+    font-size: clamp(15px, 2vw, 18px);
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+/* Details section */
+.details-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 20px 0;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.detail-item i {
+    font-size: clamp(22px, 3vw, 28px);
+    color: var(--green);
+}
+
+
+/* Closing text */
+.invitation-text .closing {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+/* Small note */
+.invitation-text .note {
+    font-size: 14px;
+    color: #777;
+
+    margin-top: 10px;
+    line-height: 1.4;
 }
 
 .countdown-section{
@@ -649,68 +693,126 @@ body::after{
 
 @media (max-width: 768px) {
 
-    .invitation-section {
-        min-height: 100svh;
-        padding: 30px 10px;
+    .invitation-section{
+        min-height:100vh;
+        padding:40px 15px;
+        background-attachment:scroll;
     }
 
-    .lace-frame {
-        width: 95vw;
-        height: auto;
-        min-height: 85svh;
-        aspect-ratio: 600 / 850;
-        padding: 55px 12% 45px;
-        background-size: 100% 100%;
-        margin: 10px auto;
+    .invitation-wrapper{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
     }
 
-    .invitation-text {
-        height: 100%;
-        justify-content: center;
-        transform: none;
+    .paper-clip{
+        width:120px;
+        top:-15px;
     }
 
-    .call {
-        width: clamp(100px, 25vw, 140px);
+    .lace-frame{
+        width:95vw;
+        max-width:500px;
+
+        aspect-ratio:600/850;
+
+        background-image:url("images/laceFrame.png");
+        background-repeat:no-repeat;
+        background-position:center;
+        background-size:100% 100%;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        padding:
+            clamp(60px,12vw,90px)
+            clamp(40px,10vw,70px)
+            clamp(55px,10vw,80px);
+
+        margin:20px auto;
     }
 
-    .invitation-text .intro {
-        font-size: clamp(12px, 3vw, 14px);
+    .invitation-text{
+        width:100%;
+        height:100%;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:space-evenly;
+        align-items:center;
+        text-align:center;
+
+        color:#4b433d;
     }
 
-    .invitation-text .names {
-        font-size: clamp(22px, 7vw, 32px);
-        margin: 5px 0;
+    .call{
+        width:130px;
+        margin:0;
     }
 
-    .invitation-text .date-text {
-        font-size: clamp(12px, 3vw, 14px);
-        margin: 10px 0;
+    .intro{
+        font-size:14px;
+        line-height:1.7;
+        margin:0;
     }
 
-    .details-grid {
-        gap: 10px;
-        margin: 5px 0;
+    .hero-text{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:10px;
     }
 
-    .detail-item i {
-        font-size: 16px;
+    .name-img{
+        height:50px;
+        width:auto;
     }
 
-    .detail-item span,
-    .detail-item p {
-        font-size: clamp(10px, 2.8vw, 12px);
+    .hero-text span{
+        font-size:28px;
     }
 
-    .invitation-text .closing {
-        font-size: clamp(11px, 3vw, 13px);
-        margin-top: 10px;
+    .date-text{
+        font-size:15px;
+        line-height:1.6;
+        margin:0;
     }
 
-    .invitation-text .note {
-        font-size: 10px;
-        margin-top: 5px;
+    .details-grid{
+        display:flex;
+        justify-content:center;
+        align-items:flex-start;
+        gap:20px;
+        width:100%;
     }
+
+    .detail-item{
+        flex:1;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:6px;
+    }
+
+    .detail-item i{
+        font-size:20px;
+        color:var(--green);
+        margin-bottom:5px;
+    }
+
+    .detail-item span{
+        font-size:12px;
+        line-height:1.4;
+    }
+
+    .closing{
+        font-size:14px;
+        font-weight:bold;
+        margin:0;
+    }
+
 
     /* Countdown */
     .countdown {
@@ -832,3 +934,4 @@ body::after{
         margin-left: 16px;
     }
 }
+
