@@ -545,7 +545,6 @@ body::after{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     padding: 50px 20px;
     position: relative;
 }
@@ -716,7 +715,7 @@ body::after{
     /* Calligraphy image inside frame */
     .call {
         width: 140px;
-        margin-top: -60px;
+        margin-top: -30px;
         margin-bottom: 5px;
     }
 
@@ -810,7 +809,7 @@ body::after{
         padding: 0 10px;
     }
 
-        .combined-section {
+    .combined-section {
         padding: 40px 10px;
         min-height: 100svh;
     }
