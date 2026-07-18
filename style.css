@@ -168,7 +168,7 @@ body::after{
 
 .wax-seal{
     position:absolute;
-    width:80px;
+    width:min(80px, 15vw);
     z-index:2;
     top:52%;
     left:50%;
@@ -182,7 +182,7 @@ body::after{
     top:calc(50% + 200px);
     font-family:'Marhey',cursive;
     color:var(--green);
-    font-size:30px;
+    font-size:clamp(18px, 3vw, 30px);
     font-weight:bold;
     text-align:center;
     width:100%;
@@ -232,8 +232,8 @@ body::after{
 /* Envelope container */
 .hero-collage {
     position: relative;
-    width: 350px;
-    height: 400px;
+    width: min(350px, 85vw);
+    height: min(400px, 95vw);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -330,25 +330,20 @@ body::after{
 }
 
 .name-img {
-    height: 100px;
+    height:min(100px, 18vw);
     width: auto;
 }
 
 .hero-text span {
     color: #b89b5e;
-    font-size: 48px;
+    font-size:clamp(24px, 5vw, 48px);
     font-weight: bold;
 }
 
 .section h2{
-
-
     color:var(--green);
-
     font-size:44px;
-
     margin-bottom:35px;
-
 }
 
 .invitation-section {
@@ -374,14 +369,14 @@ body::after{
     top: -30px;
     left: 50%;
     transform: translateX(-50%);
-    width: 200px;
+    width:min(200px, 35vw);
     z-index: 10;
     filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.4));
 }
 
 .lace-frame {
-    width: 600px;
-    height: 850px;
+    width:min(600px, 90vw);
+    height:min(850px, 130vw);
     background-image: url("images/laceFrame.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -417,7 +412,7 @@ body::after{
 
 .call{
     margin-top: -60px;
-    width:220px;
+    width:min(220px, 45vw);
     filter:drop-shadow(0 10px 20px rgba(0,0,0,.18));
 }
 
@@ -440,8 +435,14 @@ body::after{
 
 /* Date */
 .invitation-text .date-text {
-    font-size: 18px;
+    font-size: clamp(16px, 2vw, 20px);
     margin: 10px 0;
+}
+
+.detail-item span {
+    font-size: clamp(15px, 2vw, 18px);
+    text-align: center;
+    line-height: 1.5;
 }
 
 
@@ -450,7 +451,6 @@ body::after{
     display: flex;
     justify-content: center;
     align-items: center;
-
     gap: 50px;
     margin: 20px 0;
 }
@@ -459,12 +459,11 @@ body::after{
     display: flex;
     flex-direction: column;
     align-items: center;
-
     gap: 8px;
 }
 
 .detail-item i {
-    font-size: 28px;
+    font-size: clamp(22px, 3vw, 28px);
     color: var(--green);
 }
 
@@ -497,75 +496,44 @@ body::after{
 }
 
 .countdown{
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     gap:25px;
-
     flex-wrap:wrap;
-
     margin-top:50px;
-
 }
 
 .time-box{
-
-    width:140px;
-
-    height:160px;
-
+    width:min(140px, 28vw);
+    height:min(160px, 32vw);
     background:rgba(255,255,255,.65);
-
     backdrop-filter:blur(18px);
-
     border-radius:35px;
-
     box-shadow:0 25px 45px rgba(0,0,0,.08);
-
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
-
     transition:.35s;
-
 }
 
 .time-box:hover{
-
     transform:translateY(-12px);
-
     box-shadow:0 35px 60px rgba(0,0,0,.15);
-
 }
 
 .time-box span{
-
     font-family:'Cinzel',serif;
-
     font-size:58px;
-
     color:var(--gold);
-
     font-weight:bold;
-
 }
 
 .time-box small{
-
     margin-top:12px;
-
     color:var(--green);
-
     font-size:18px;
-
 }
 
 .combined-section {
@@ -620,7 +588,7 @@ body::after{
 
 .call-image {
     margin-top: -70px;
-    width: 280px;
+    width:min(280px, 70vw);
     height: auto;
 }
 
@@ -631,7 +599,7 @@ body::after{
 }
 
 .polaroid {
-    width: 150px;
+    width:min(150px, 30vw);
     padding: 10px 10px 30px;
     background: white;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
@@ -651,7 +619,7 @@ body::after{
 }
 
 .swan {
-    width: 100px;
+    width:min(100px, 18vw);
     top: 40px;
     right: -30px;
     z-index: 4;
@@ -724,74 +692,208 @@ body::after{
 }
 
 
+@media (max-width: 768px) {
 
-/* =========================================
-   تعديلات التجاوب (Responsive Design)
-   ========================================= */
+    .invitation-section {
+        min-height: 100svh;
+        padding: 40px 10px;
+    }
 
-/* شاشات الموبايل الصغيرة (أقل من 600px) */
-@media (max-width: 600px) {
-    
-    /* تصغير العناوين لتناسب الشاشة */
-    h2, .section h2 { font-size: 32px !important; }
-    .names { font-size: 35px !important; }
-    
-    /* تصغير إطار الدعوة */
     .lace-frame {
-        width: 90vw;
-        height: 600px;
-        padding: 50px 20px;
-        background-size: contain;
+        width: 95vw;
+        height: 85svh;
+        min-height: unset;
+        padding: 35px 12%;
+        background-size: 100% 100%;
+        margin: 10px auto;
     }
-    
-    /* تصغير الـ paper clip */
-    .paper-clip { width: 120px; top: -20px; }
-    
-    /* تنسيق شبكة التفاصيل في صف واحد */
+
+    .invitation-text {
+        justify-content: center;
+        transform: translateY(-5px);
+    }
+
+    /* Calligraphy image inside frame */
+    .call {
+        width: 140px;
+        margin-top: -60px;
+        margin-bottom: 5px;
+    }
+
+    /* Intro */
+    .invitation-text .intro {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+
+    /* Names */
+    .invitation-text .names {
+        font-size: clamp(26px, 7vw, 32px);
+        margin: 5px 0;
+    }
+
+    /* Date closer to details */
+    .invitation-text .date-text {
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 20px 0 20px;
+        padding: 0;
+    }
+
+    /* Details */
     .details-grid {
-        flex-direction: column;
-        gap: 20px;
+        gap: 25px;
+        margin: 5px 0;
+        flex-wrap: nowrap;
     }
 
-    /* تصغير المكونات في السكشن المدمج */
+    .detail-item {
+        min-width: 0;
+        flex: 1;
+        gap: 3px;
+    }
+
+    .detail-item i {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .detail-item span,
+    .detail-item p {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+    /* Closing */
+    .invitation-text .closing {
+        font-size: 13px;
+        margin-top: 30px;
+    }
+
+    .invitation-text .note {
+        font-size: 11px;
+        margin-top: 5px;
+    }
+
+    /* Countdown */
+    .countdown {
+        gap: 10px;
+    }
+
+    .time-box {
+        width: 70px;
+        height: 80px;
+        border-radius: 15px;
+    }
+
+    .time-box span {
+        font-size: 22px;
+    }
+
+    .time-box small {
+        font-size: 11px;
+    }
+
+    /* Decorative */
+    .hero-collage {
+        transform: scale(.8);
+    }
+
+    .call {
+        width: 180px;
+    }
+
+    .center-text p {
+        font-size: 17px;
+        padding: 0 10px;
+    }
+
+        .combined-section {
+        padding: 40px 10px;
+        min-height: 100svh;
+    }
+
     .composition-wrapper {
-        flex-direction: column;
-        gap: 30px;
+        position: relative;
+        width: 100%;
+        max-width: 420px;
+        height: 600px;
     }
 
-    .polaroid { width: 100px; }
-    .swan { width: 80px; position: relative; top: 0; right: 0; }
-    
-    /* إخفاء أو إعادة تموضع العناصر المطلقة التي تسبب مشاكل */
-    .p1, .p2 { position: relative; left: auto; top: auto; }
-    .decorative-elements { 
-        display: flex; 
-        justify-content: center; 
-        gap: 15px; 
-        margin-bottom: 20px;
+
+    /* Text page in the center */
+    .center-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+        width: 75%;
+        min-height: 330px;
+       
+
+        z-index: 5;
     }
 
-    /* تقليل حجم الخطوط */
-    .center-text h1 { font-size: 35px; }
-    .time-box { width: 75px; height: 90px; border-radius: 20px; }
-    .time-box span { font-size: 30px; }
-    .time-box small { font-size: 12px; margin-top: 5px; }
-}
 
-/* الشاشات المتوسطة (Tablets) */
-@media (max-width: 900px) and (min-width: 601px) {
-    .lace-frame { width: 80%; }
-    .hero-collage { width: 300px; }
-}
+    .decorative-elements {
+        position: absolute;
+        inset: 0;
+        z-index: 9;
+    }
 
-/* التأكد من أن الصور لا تخرج عن حدود الشاشة */
-img {
-    max-width: 100%;
-    height: auto;
-}
 
-/* منع التمرير الأفقي المزعج */
-body {
-    overflow-x: hidden;
-    width: 100%;
+    .element {
+        position: absolute !important;
+    }
+
+
+    /* Left top photo glued to page */
+    .p1 {
+        width: 100px;
+        top: 350px;
+        left: 0;
+        transform: rotate(-12deg);
+    }
+
+
+    /* Right side swan decoration */
+    .swan {
+        width: 90px;
+        top: 180px;
+        right: 0;
+        transform: rotate(12deg);
+    }
+
+
+    /* Bottom photo */
+    .p2 {
+        width: 120px;
+        bottom: 90px;
+        right: 20px;
+        transform: rotate(10deg);
+    }
+
+
+    .call-image {
+        width: 230px;
+        margin-top: 0;
+        margin-right: 16px;
+    }
+
+
+    .center-text p {
+        font-size: 20px;
+        line-height: 1.8;
+        margin-top: -70px;
+    }
+
+    .center-text h3 {
+        font-size: 25px;
+        line-height: 1.8;
+        margin-top: 20px;
+        margin-left: 16px;
+    }
 }
