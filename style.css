@@ -374,115 +374,70 @@ body::after{
     filter: drop-shadow(4px 6px 6px rgba(0,0,0,0.4));
 }
 
-.lace-frame {
-    width:min(600px, 90vw);
-    height:min(850px, 130vw);
-    background-image: url("images/laceFrame.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+@media (max-width: 768px) {
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .lace-frame {
+        width: 95vw;
+        height: 85svh;
+        padding: 70px 14% 45px;
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
 
-    padding: 80px;
-    margin: 50px auto;
+    .invitation-text {
+        width: 100%;
+        height: 100%;
+        justify-content: flex-start;
+        transform: none;
+        gap: 0;
+    }
 
-    box-sizing: border-box;
-    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.4));
-}
+    .call {
+        width: 110px;
+        margin: 0 auto 5px;
+        flex-shrink: 0;
+    }
 
+    .invitation-text .intro {
+        font-size: 12px;
+        line-height: 1.3;
+        margin: 5px 0 10px;
+    }
 
-/* Main invitation content */
-.invitation-text{
-    width:100%;
-    height:100%;
-    text-align:center;
-    color:#4b433d;
+    .invitation-text .names {
+        font-size: 26px;
+        margin: 5px 0;
+    }
 
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    .invitation-text .date-text {
+        font-size: 12px;
+        margin: 8px 0;
+    }
 
-    margin:0;
-    position:relative; 
-}
+    .details-grid {
+        gap: 12px;
+        margin: 5px 0;
+    }
 
-.call{
-    margin-top: -60px;
-    width:min(220px, 45vw);
-    filter:drop-shadow(0 10px 20px rgba(0,0,0,.18));
-}
+    .detail-item i {
+        font-size: 15px;
+        margin-bottom: 3px;
+    }
 
-/* Intro text */
-.invitation-text .intro {
-    margin-top: -30px;
-    font-size: 18px;
-    line-height: 1.6;
-}
+    .detail-item span,
+    .detail-item p {
+        font-size: 10px;
+        line-height: 1.1;
+    }
 
+    .invitation-text .closing {
+        font-size: 11px;
+        margin-top: 8px;
+    }
 
-/* Names */
-.invitation-text .names {
-    font-family: "Amiri", serif;
-    font-size: 42px;
-    color: #333;
-    margin: 15px 0;
-}
-
-
-/* Date */
-.invitation-text .date-text {
-    font-size: clamp(16px, 2vw, 20px);
-    margin: 10px 0;
-}
-
-.detail-item span {
-    font-size: clamp(15px, 2vw, 18px);
-    text-align: center;
-    line-height: 1.5;
-}
-
-
-/* Details section */
-.details-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin: 20px 0;
-}
-
-.detail-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-.detail-item i {
-    font-size: clamp(22px, 3vw, 28px);
-    color: var(--green);
-}
-
-
-/* Closing text */
-.invitation-text .closing {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-
-/* Small note */
-.invitation-text .note {
-    font-size: 14px;
-    color: #777;
-
-    margin-top: 10px;
-    line-height: 1.4;
+    .invitation-text .note {
+        font-size: 9px;
+    }
 }
 
 .countdown-section{
