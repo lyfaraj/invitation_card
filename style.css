@@ -690,24 +690,16 @@ body::after{
 
 @media (max-width: 768px) {
 
- .invitation-section{
+    .invitation-section{
         min-height:100vh;
         padding:30px 15px;
     }
 
-    .lace-frame{
-        width:85vw;
-        max-width:520px;
-        aspect-ratio:600 / 850;
-
-        padding:
-            12% 10% 11%;
-    }
-
-    .invitation-text{
-        height:100%;
-        justify-content:space-between;
-        gap:15px;
+    .invitation-wrapper{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
     }
 
     .paper-clip{
@@ -715,42 +707,124 @@ body::after{
         top:-12px;
     }
 
-    .call{
-        width:110px;
+    .lace-frame{
+        width:85vw;
+        max-width:520px;
+
+        aspect-ratio:600/850;
+
+        background-image:url("images/laceFrame.png");
+        background-repeat:no-repeat;
+        background-position:center;
+        background-size:100% 100%;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        padding:
+            12% 
+            10% 
+            11%;
+
+        margin:20px auto;
     }
+
+
+    .invitation-text{
+        width:100%;
+        height:100%;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+
+        gap:22px;
+
+        color:#4b433d;
+    }
+
+
+    .call{
+        width:115px;
+        margin:0;
+    }
+
 
     .intro{
         font-size:14px;
+        line-height:1.6;
+        margin:0;
     }
+
+
+    .hero-text{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:8px;
+    }
+
 
     .name-img{
         height:45px;
+        width:auto;
     }
+
 
     .hero-text span{
         font-size:26px;
     }
 
+
     .date-text{
         font-size:14px;
+        line-height:1.5;
+        margin:0;
     }
 
+
     .details-grid{
+        display:flex;
+        justify-content:center;
+        align-items:flex-start;
+
         gap:15px;
+        width:100%;
+
+        margin-top:5px;
     }
+
+
+    .detail-item{
+        flex:1;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:5px;
+    }
+
 
     .detail-item i{
         font-size:18px;
+        color:var(--green);
+        margin-bottom:3px;
     }
+
 
     .detail-item span{
         font-size:11px;
+        line-height:1.4;
     }
+
 
     .closing{
         font-size:13px;
+        font-weight:bold;
+        margin:0;
     }
-
 
     /* Countdown */
     .countdown {
